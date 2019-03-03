@@ -1,0 +1,14 @@
+//advice可以为空，填写为answer:[]即可
+//其中answer0对应的分数为0，answern对应的分数为n
+[{
+    "title":"题目内容",
+    "answer":["answer0","answer1",...,"answern"],
+    "weight":"这个题权重",
+    "advice":[{"answerChosed":"选第i个就填i","detailAdvice":"选了第i个选项之后这个题目单独的评价"},...]
+},{
+    "title":"题目内容",
+    "answer":["answer0","answer1",...,"answern"],
+    "weight":"这个题权重",
+    "advice":[{"answerChosed":"选第i个就填i","detailAdvice":"选了第i个选项之后这个题目单独的评价"},...]
+},...
+]
