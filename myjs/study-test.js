@@ -403,8 +403,8 @@ function paintResult()
 
     let finalAdvice="";
     for(let i in advice)
-        finalAdvice+=advice[i];
-    cardFooter.textContent=finalAdvice;
+        finalAdvice+=((Number(i)+1).toString()+". "+advice[i]+"<br/>");
+    cardFooter.innerHTML=finalAdvice;
     form.style.width="600px";
     form.style.height="400px";
     form.className="mx-auto";
