@@ -52,6 +52,10 @@ window.onload = function() {
                     fetch(partDir[i]+"/"+"question.json").then(function(response){
                         response.json().then(function(json){
                             question[i]=json;
+                            for(let j=0;j<question[i].length;j++)
+                            {
+                                question[i][j].weight=Number(question[i][j].weight);
+                            }
                             count++;
                             if(count==maxCount)
                                 display();
@@ -75,11 +79,12 @@ window.onload = function() {
                     });
                 }
 
+                // toNum();
                 // test
-                // console.log(partDir);
-                // console.log(question);
-                // console.log(score);
-                // console.log(partName);
+                console.log(partDir);
+                console.log(question);
+                console.log(score);
+                console.log(partName);
 
                 // display();
             });
@@ -88,6 +93,17 @@ window.onload = function() {
             console.log("获取",dir,"失败");
     });
 };
+
+//将question中的权值weight变为数字
+// function toNum()
+// {
+//     for(let i =0;i<question.length;i++)
+//         for(let j=0;j<question[i].length;j++)
+//         {
+//             question[i][j].weight=Number(question[i][j].weight);
+//             console.log(1);
+//         }
+// }
 
 //生成网页内容
 function display()
